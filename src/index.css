@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700;900&display=swap');
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-background: #04040A;
+  --color-surface: #0B0B14;
+  --font-sans: "Outfit", sans-serif;
+  --font-clash: "Clash Display", sans-serif;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/WEB/fonts/ClashDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/WEB/fonts/ClashDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/WEB/fonts/ClashDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.4), 0 0 20px rgba(168, 85, 247, 0.2);
+  }
+  .bg-glow {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-white font-sans overflow-x-hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #04040A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1f2d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34344a;
+}
