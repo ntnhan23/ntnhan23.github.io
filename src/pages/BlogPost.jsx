@@ -7,7 +7,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { getPostBySlug } from '../utils/markdownParser';
 import ParticleNetwork from '../components/ParticleNetwork';
 
@@ -77,9 +77,9 @@ export default function BlogPost() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
           className="prose prose-neutral prose-lg md:prose-xl max-w-none pb-20
-          prose-h1:font-clash prose-h1:text-4xl prose-h1:text-transparent prose-h1:bg-clip-text prose-h1:bg-gradient-to-r prose-h1:from-indigo-600 prose-h1:to-cyan-600 prose-h1:mt-16 prose-h1:mb-8
-          prose-h2:font-clash prose-h2:text-3xl prose-h2:text-transparent prose-h2:bg-clip-text prose-h2:bg-gradient-to-r prose-h2:from-purple-600 prose-h2:to-indigo-500 prose-h2:mt-12 prose-h2:mb-6
-          prose-h3:font-clash prose-h3:text-2xl prose-h3:text-slate-800 prose-h3:mt-8 prose-h3:mb-4
+          prose-h1:font-sans prose-h1:font-bold prose-h1:text-4xl prose-h1:text-transparent prose-h1:bg-clip-text prose-h1:bg-gradient-to-r prose-h1:from-indigo-600 prose-h1:to-cyan-600 prose-h1:mt-16 prose-h1:mb-8
+          prose-h2:font-sans prose-h2:font-bold prose-h2:text-3xl prose-h2:text-transparent prose-h2:bg-clip-text prose-h2:bg-gradient-to-r prose-h2:from-purple-600 prose-h2:to-indigo-500 prose-h2:mt-12 prose-h2:mb-6
+          prose-h3:font-sans prose-h3:font-bold prose-h3:text-2xl prose-h3:text-slate-800 prose-h3:mt-8 prose-h3:mb-4
           prose-p:text-slate-700 prose-p:leading-relaxed prose-p:font-sans
           prose-a:text-indigo-600 hover:prose-a:text-indigo-700 prose-a:no-underline hover:prose-a:underline
           prose-strong:text-slate-900 prose-strong:font-semibold
@@ -94,33 +94,33 @@ export default function BlogPost() {
                 return <a {...props} target="_blank" rel="noopener noreferrer" />;
               },
               pre({ children }) {
-                return <div className="my-10 rounded-xl overflow-hidden shadow-sm border border-neutral-200/80 bg-white/50 backdrop-blur-md relative group">{children}</div>;
+                return <div className="my-10 rounded-xl overflow-hidden shadow-2xl border border-neutral-800 bg-[#1E1E1E] relative group">{children}</div>;
               },
               code({node, inline, className, children, ...props}) {
                 const match = /language-(\w+)/.exec(className || '')
                 return !inline && match ? (
                   <>
-                    <div className="bg-[#F8FAFC] px-4 py-3 flex items-center gap-2 border-b border-neutral-200/80 relative">
+                    <div className="bg-[#181818] px-4 py-3 flex items-center gap-2 border-b border-neutral-800 relative">
                       <div className="flex gap-1.5 z-10">
                         <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
                         <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
                         <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
                       </div>
-                      <div className="absolute inset-x-0 text-center text-neutral-400 text-[10px] font-mono font-semibold tracking-widest uppercase">
+                      <div className="absolute inset-x-0 text-center text-neutral-500 text-[10px] font-mono font-semibold tracking-widest uppercase">
                         {match[1]}
                       </div>
                     </div>
                     <SyntaxHighlighter
                       {...props}
                       children={String(children).replace(/\n$/, '')}
-                      style={materialLight}
+                      style={vscDarkPlus}
                       language={match[1]}
                       PreTag="div"
-                      customStyle={{ margin: 0, padding: '1.5rem', background: 'transparent', fontSize: '0.9rem', lineHeight: '1.7' }}
+                      customStyle={{ margin: 0, padding: '1.5rem', background: 'transparent', fontSize: '0.9rem', lineHeight: '1.7', fontFamily: "'JetBrains Mono', monospace" }}
                     />
                   </>
                 ) : (
-                  <code {...props} className="text-indigo-600 bg-indigo-50 px-1.5 py-0.5 rounded-md font-medium text-[0.9em]">
+                  <code {...props} className="text-indigo-600 bg-indigo-50 px-1.5 py-0.5 rounded-md font-medium text-[0.9em] font-sans">
                     {children}
                   </code>
                 )

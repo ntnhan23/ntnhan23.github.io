@@ -52,7 +52,7 @@ export default function BlogList() {
                     </div>
                   )}
                 </div>
-                <h2 className="text-2xl font-clash font-semibold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                <h2 className="text-2xl font-sans font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
                   {post.metadata.title}
                 </h2>
                 <p className="text-slate-600 leading-relaxed font-sans line-clamp-3">
