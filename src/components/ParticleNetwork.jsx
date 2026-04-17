@@ -48,13 +48,13 @@ export default memo(function ParticleNetwork() {
       },
       particles: {
         color: {
-          value: "#cbd5e1", /* Slate 300 - Neutral */
+          value: ["#6366f1", "#0ea5e9", "#14b8a6"], /* Indigo, Sky Blue, Teal */
         },
         links: {
-          color: "#94a3b8", /* Slate 400 */
+          color: "#818cf8", /* Indigo 400 */
           distance: 150,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.4,
           width: 1,
         },
         move: {

@@ -81,8 +81,6 @@ export default memo(function FluidBlob() {
           
           {/* Khối Thạch Tối Giản */}
           <Blob />
-          
-          <ContactShadows position={[0, -2.5, 0]} opacity={0.3} scale={15} blur={4} far={4} color="#8b5cf6" />
         </Canvas>
       </div>
     </div>
