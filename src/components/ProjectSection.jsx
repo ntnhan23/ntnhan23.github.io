@@ -27,7 +27,7 @@ export default function ProjectSection() {
              viewport={{ once: true }}
              className="text-5xl md:text-[5rem] font-clash font-normal text-neutral-900 tracking-tight leading-[1.1]"
            >
-             My <span className="text-blue-600">Work</span>
+             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Work</span>
            </motion.h2>
         </div>
 
@@ -54,7 +54,7 @@ export default function ProjectSection() {
           >
             {/* Vùng Ảnh (Image) */}
             <div className="relative w-full mb-10 flex items-center justify-center cursor-pointer">
-              <div className="relative w-full shadow-lg aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden border border-neutral-200 group-hover:border-blue-300 group-hover:shadow-[0_0_40px_rgba(147,197,253,0.4)] transition-all duration-700">
+              <div className="relative w-full shadow-lg aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden border border-neutral-200 group-hover:border-pink-300 group-hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] transition-all duration-700">
                  <a href="https://www.youtube.com/watch?v=trNBoFlZsGE" target="_blank" rel="noreferrer" className="block w-full h-full">
                     <img 
                       src={`${import.meta.env.BASE_URL}snitches.png`} 
@@ -65,8 +65,10 @@ export default function ProjectSection() {
                  </a>
               </div>
               
-              <a href="https://www.youtube.com/watch?v=trNBoFlZsGE" target="_blank" rel="noreferrer" className="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-full flex items-center justify-center border border-neutral-200 text-neutral-900 hover:bg-black hover:text-white transition-colors duration-300 z-10 shadow-lg">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              <a href="https://www.youtube.com/watch?v=trNBoFlZsGE" target="_blank" rel="noreferrer" className="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 z-10 shadow-lg">
+                <div className="w-12 h-12 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-400 group-hover:bg-gradient-to-r group-hover:from-indigo-500 group-hover:to-pink-500 group-hover:border-transparent group-hover:text-white transition-all duration-300">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
               </a>
             </div>
 

@@ -35,10 +35,10 @@ export default memo(function ParticleNetwork() {
         },
         modes: {
           grab: {
-            distance: 180, // Bán kính (threshold) để các Node kết nối với chuột
+            distance: 180,
             links: {
               opacity: 0.8,
-              color: "#38bdf8", // Xanh sáng (Sky)
+              color: "#f43f5e", /* Rose 500 */
             },
           },
           push: {
@@ -48,10 +48,10 @@ export default memo(function ParticleNetwork() {
       },
       particles: {
         color: {
-          value: "#2563eb", /* Blue-600 */
+          value: ["#f43f5e", "#3b82f6", "#10b981", "#f59e0b", "#8b5cf6"], /* Multi-color array: Rose, Blue, Emerald, Amber, Violet */
         },
         links: {
-          color: "#3b82f6", /* Blue-500 */
+          color: "#a855f7", /* Purple 500 */
           distance: 150,
           enable: true,
           opacity: 0.3,
