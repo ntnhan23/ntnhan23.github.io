@@ -47,7 +47,7 @@ export default function BlogPost() {
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             ALL ARTICLES
           </Link>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-clash font-semibold text-slate-900 tracking-tight leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-slate-900 tracking-tight leading-tight mb-6">
             {post.metadata.title}
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-slate-500 font-sans text-sm tracking-wide border-b border-neutral-200 pb-8">
