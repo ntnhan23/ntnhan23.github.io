@@ -4,8 +4,8 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-background: #04040A;
-  --color-surface: #0B0B14;
+  --color-background: #FAFAFA;
+  --color-surface: #FFFFFF;
   --font-sans: "Outfit", sans-serif;
   --font-clash: "Clash Display", sans-serif;
 }
@@ -35,10 +35,10 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.4), 0 0 20px rgba(168, 85, 247, 0.2);
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.2), 0 0 20px rgba(168, 85, 247, 0.1);
   }
   .bg-glow {
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.05);
   }
 }
 
@@ -47,7 +47,7 @@ html {
 }
 
 body {
-  @apply bg-background text-white font-sans overflow-x-hidden;
+  @apply bg-background text-neutral-900 font-sans overflow-x-hidden;
 }
 
 /* Custom scrollbar */
@@ -55,12 +55,12 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #04040A;
+  background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f1f2d;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #34344a;
+  background: #94A3B8;
 }

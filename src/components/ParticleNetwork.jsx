@@ -48,10 +48,10 @@ export default memo(function ParticleNetwork() {
       },
       particles: {
         color: {
-          value: "#a855f7", // Tím Neon
+          value: "#7e22ce",
         },
         links: {
-          color: "#ec4899", // Hồng Neon
+          color: "#9333ea",
           distance: 150,
           enable: true,
           opacity: 0.3,

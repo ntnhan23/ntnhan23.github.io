@@ -53,16 +53,16 @@ export default function TechStackSection() {
           className="flex flex-col items-center gap-16 md:gap-24 w-full"
         >
           {/* Tiêu đề ăn theo style của "About me" */}
-          <h2 className="text-5xl md:text-[5rem] font-clash font-medium text-white tracking-tight leading-[1.1] select-none text-center">
-            Tech stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d8b4fe] to-[#a855f7]">I use</span>
+          <h2 className="text-5xl md:text-[5rem] font-clash font-medium text-neutral-900 tracking-tight leading-[1.1] select-none text-center">
+            Tech stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">I use</span>
           </h2>
 
           {/* Dải Marquee Typography quay vòng vô cực chứa Icon và Tên công cụ */}
           <div className="relative w-full flex overflow-hidden group select-none py-10">
             
             {/* Gradient masks mờ mép */}
-            <div className="absolute top-0 left-0 bottom-0 w-24 md:w-64 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute top-0 right-0 bottom-0 w-24 md:w-64 bg-gradient-to-l from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 bottom-0 w-24 md:w-64 bg-gradient-to-r from-[#FAFAFA] via-[#FAFAFA]/50 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 bottom-0 w-24 md:w-64 bg-gradient-to-l from-[#FAFAFA] via-[#FAFAFA]/50 to-transparent z-10 pointer-events-none"></div>
 
             <div className="flex w-max animate-scroll items-center">
               
@@ -70,7 +70,7 @@ export default function TechStackSection() {
               <div className="flex flex-nowrap items-center gap-12 md:gap-16 px-6 md:px-8">
                 {techList.map((tech, index) => (
                   <React.Fragment key={`group1-${index}`}>
-                    <div className="flex items-center justify-center hover:scale-125 hover:brightness-125 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 cursor-crosshair">
+                    <div className="flex items-center justify-center hover:scale-125 hover:brightness-[1.1] hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-crosshair">
                       <span className="text-5xl md:text-[4.5rem] lg:text-[5rem] leading-none block">{tech.icon}</span>
                     </div>
                   </React.Fragment>
@@ -81,7 +81,7 @@ export default function TechStackSection() {
               <div className="flex flex-nowrap items-center gap-12 md:gap-16 px-6 md:px-8">
                 {techList.map((tech, index) => (
                   <React.Fragment key={`group2-${index}`}>
-                    <div className="flex items-center justify-center hover:scale-125 hover:brightness-125 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 cursor-crosshair">
+                    <div className="flex items-center justify-center hover:scale-125 hover:brightness-[1.1] hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-crosshair">
                       <span className="text-5xl md:text-[4.5rem] lg:text-[5rem] leading-none block">{tech.icon}</span>
                     </div>
                   </React.Fragment>

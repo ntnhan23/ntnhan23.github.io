@@ -59,9 +59,9 @@ export default function AboutSection() {
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8 }}
              viewport={{ once: true }}
-             className="text-5xl md:text-[5rem] font-clash font-medium text-white tracking-tight leading-[1.1] select-none"
+             className="text-5xl md:text-[5rem] font-clash font-medium text-neutral-900 tracking-tight leading-[1.1] select-none"
            >
-             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d8b4fe] to-[#a855f7]">
+             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">
                me
              </span>
            </motion.h2>
@@ -88,17 +88,17 @@ export default function AboutSection() {
               animate={isInView ? { opacity: 1, scale: 1, z: 0 } : {}}
               whileHover={{ rotateY: 0, rotateX: 0, scale: 1.02 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="rounded-xl overflow-hidden border border-neutral-700/50 bg-[#07070b]/90 shadow-[-30px_30px_60px_rgba(0,0,0,0.6)] backdrop-blur-md font-mono text-[13px] md:text-sm leading-relaxed relative cursor-crosshair"
+              className="rounded-xl overflow-hidden border border-neutral-200 bg-white/90 shadow-[-30px_30px_60px_rgba(0,0,0,0.08)] backdrop-blur-md font-mono text-[13px] md:text-sm leading-relaxed relative cursor-crosshair"
             >
               {/* Ánh sáng chạy ngang kính */}
-              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neutral-300 to-transparent" />
               
               {/* Top Bar (Mac styled) */}
-              <div className="bg-[#12121a] px-4 py-3.5 flex items-center gap-2 border-b border-neutral-700/50">
-                <div className="w-3.5 h-3.5 rounded-full bg-red-500/80 shadow-[0_0_8px_rgba(239,68,68,0.4)]"></div>
-                <div className="w-3.5 h-3.5 rounded-full bg-yellow-500/80 shadow-[0_0_8px_rgba(234,179,8,0.4)]"></div>
-                <div className="w-3.5 h-3.5 rounded-full bg-green-500/80 shadow-[0_0_8px_rgba(34,197,94,0.4)]"></div>
-                <div className="mx-auto text-neutral-500 text-[10px] md:text-xs font-semibold tracking-widest hidden sm:block opacity-60">guest@nahn: ~/"about me"</div>
+              <div className="bg-[#F8FAFC] px-4 py-3.5 flex items-center gap-2 border-b border-neutral-200">
+                <div className="w-3.5 h-3.5 rounded-full bg-red-400"></div>
+                <div className="w-3.5 h-3.5 rounded-full bg-yellow-400"></div>
+                <div className="w-3.5 h-3.5 rounded-full bg-green-400"></div>
+                <div className="mx-auto text-neutral-500 text-[10px] md:text-xs font-semibold tracking-widest hidden sm:block">guest@nahn: ~/"about me"</div>
               </div>
               
               {/* Terminal Body */}
@@ -110,18 +110,18 @@ export default function AboutSection() {
                   const textToRender = isCurrent ? cmd.text.slice(0, charIdx) : cmd.text;
                   
                   return (
-                    <div key={idx} className={`mb-5 ${cmd.type === 'cmd' ? 'text-[#c2a4ff]' : 'text-neutral-300'} whitespace-pre-wrap`}>
+                    <div key={idx} className={`mb-5 ${cmd.type === 'cmd' ? 'text-purple-700' : 'text-neutral-600'} whitespace-pre-wrap`}>
                       {cmd.type === 'cmd' ? (
-                        <span className="text-[#34d399] font-bold mr-3 tracking-widest">nahn_admin@~ %</span>
+                        <span className="text-[#10b981] font-bold mr-3 tracking-widest">nahn_admin@~ %</span>
                       ) : (
-                        <span className="text-neutral-500 mr-2 opacity-50">❯</span>
+                        <span className="text-neutral-400 mr-2 opacity-80">❯</span>
                       )}
                       <span className={cmd.type === 'cmd' ? 'tracking-wider' : 'tracking-wide leading-loose'}>{textToRender}</span>
                       {isCurrent && (
                         <motion.span 
                           animate={{ opacity: [1, 0] }}
                           transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                          className="inline-block w-2 md:w-2.5 h-4 md:h-5 bg-white align-middle ml-1 shadow-[0_0_8px_white]"
+                          className="inline-block w-2 md:w-2.5 h-4 md:h-5 bg-neutral-900 align-middle ml-1"
                         />
                       )}
                     </div>
@@ -130,12 +130,12 @@ export default function AboutSection() {
                 
                 {/* Blinking Cursor after complete */}
                 {!isTyping && lineIdx >= commands.length && (
-                   <div className="mt-4 text-[#c2a4ff]">
-                      <span className="text-[#34d399] font-bold mr-3 tracking-widest">nahn_admin@~ %</span>
+                   <div className="mt-4 text-purple-700">
+                      <span className="text-[#10b981] font-bold mr-3 tracking-widest">nahn_admin@~ %</span>
                       <motion.span 
                           animate={{ opacity: [1, 0] }}
                           transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                          className="inline-block w-2 md:w-2.5 h-4 md:h-5 bg-[#c2a4ff] align-middle shadow-[0_0_8px_#c2a4ff]"
+                          className="inline-block w-2 md:w-2.5 h-4 md:h-5 bg-neutral-900 align-middle"
                       />
                    </div>
                 )}

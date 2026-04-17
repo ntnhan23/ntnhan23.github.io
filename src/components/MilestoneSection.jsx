@@ -51,10 +51,10 @@ export default function MilestoneSection() {
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8 }}
              viewport={{ once: false, amount: 0.5 }}
-             className="text-5xl md:text-[5rem] font-clash font-medium text-white tracking-tight leading-[1.1]"
+             className="text-5xl md:text-[5rem] font-clash font-medium text-neutral-900 tracking-tight leading-[1.1]"
            >
              Honors &<br/>
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d8b4fe] to-[#a855f7]">
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">
                milestones
              </span>
            </motion.h2>
@@ -64,7 +64,7 @@ export default function MilestoneSection() {
         <div ref={containerRef} className="relative w-full max-w-5xl mx-auto">
            
            {/* Dải nền tối tĩnh */}
-           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 md:-translate-x-1/2 w-[2px] bg-purple-900/30" />
+           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 md:-translate-x-1/2 w-[2px] bg-purple-200" />
 
            {/* Dải sáng trung tâm dọc MỞ RỘNG dần độ cao theo lineHeight */}
            <motion.div 
@@ -92,25 +92,25 @@ export default function MilestoneSection() {
                  {/* Dành cho Desktop: Cột Trái (Chức danh + Năm) */}
                  <div className="hidden md:flex w-1/2 pr-16 justify-between items-start gap-6 xl:gap-8">
                     <div className="text-left flex-1 pr-6">
-                       <h3 className="text-3xl lg:text-4xl font-clash font-medium text-neutral-200 leading-none group-hover:text-white transition-colors drop-shadow-sm">{item.title}</h3>
-                       <p className="text-[#d8b4fe] opacity-70 mt-3 font-clash text-[1.1rem] md:text-xl tracking-wide">{item.subtitle}</p>
+                       <h3 className="text-3xl lg:text-4xl font-clash font-medium text-neutral-800 leading-none group-hover:text-black transition-colors drop-shadow-none">{item.title}</h3>
+                       <p className="text-purple-700 opacity-90 mt-3 font-clash text-[1.1rem] md:text-xl tracking-wide">{item.subtitle}</p>
                     </div>
                     {/* Năm mốc thời gian */}
-                    <div className="text-5xl lg:text-6xl font-normal font-clash text-neutral-300 tracking-wider mt-1 shrink-0">
+                    <div className="text-5xl lg:text-6xl font-normal font-clash text-neutral-400 tracking-wider mt-1 shrink-0">
                        {item.year}
                     </div>
                  </div>
 
                  {/* Dành cho Mobile: Bố cục dọc */}
                  <div className="md:hidden flex flex-col pl-12 mb-6 relative">
-                    <div className="text-5xl font-normal font-clash text-neutral-300 mb-2 tracking-wider">{item.year}</div>
-                    <h3 className="text-3xl font-clash font-medium text-white leading-none drop-shadow-sm pt-1">{item.title}</h3>
-                    <p className="text-[#d8b4fe] opacity-70 font-clash text-[1.1rem] mt-2">{item.subtitle}</p>
+                    <div className="text-5xl font-normal font-clash text-neutral-400 mb-2 tracking-wider">{item.year}</div>
+                    <h3 className="text-3xl font-clash font-medium text-neutral-900 leading-none drop-shadow-none pt-1">{item.title}</h3>
+                    <p className="text-purple-700 opacity-90 font-clash text-[1.1rem] mt-2">{item.subtitle}</p>
                  </div>
 
                  {/* Cột Phải: Nội dung mô tả (Description) */}
                  <div className="w-full md:w-1/2 pl-12 md:pl-16 flex items-start">
-                    <p className="text-[#9ca3af] text-base md:text-[1.1rem] leading-relaxed pt-1 md:pt-2 md:max-w-md font-sans">
+                    <p className="text-neutral-600 text-base md:text-[1.1rem] leading-relaxed pt-1 md:pt-2 md:max-w-md font-sans">
                       {item.desc}
                     </p>
                  </div>

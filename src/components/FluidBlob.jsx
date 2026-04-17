@@ -73,8 +73,8 @@ export default memo(function FluidBlob() {
           eventSource={typeof window !== 'undefined' ? document.body : undefined}
           eventPrefix="client"
         >
-          {/* Tắt sạch ánh sáng môi trường để mảng tối sâu (Abyss) xuất hiện */}
-          <ambientLight intensity={0.0} />
+          {/* Ánh sáng môi trường cấp đủ sáng nền cho Light Theme */}
+          <ambientLight intensity={1.5} color="#ffffff" />
           
           {/* Hệ thống nhuộm màu Ánh sáng vật lý vô tận */}
           <SeamlessLighting />

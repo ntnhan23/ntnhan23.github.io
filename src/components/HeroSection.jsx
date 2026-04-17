@@ -30,10 +30,10 @@ const StaggeredAnimatedWord = ({ word, isBackground }) => {
               exit: { y: "-120%", transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } }
             }}
             className={`select-none font-clash font-black uppercase tracking-wider leading-none block pb-1 ${isBackground
-              ? "text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] bg-clip-text text-transparent bg-gradient-to-b from-[#a87cff] via-[#4c1d95] to-[#050405]"
-              : "text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] text-[#f8fafc]"
+              ? "text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] bg-clip-text text-transparent bg-gradient-to-b from-[#9333ea] via-[#7e22ce] to-[#f8fafc]"
+              : "text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] text-neutral-900"
               }`}
-            style={isBackground ? { WebkitTextStroke: "1px rgba(168, 124, 255, 0.2)" } : {}}
+            style={isBackground ? { WebkitTextStroke: "1px rgba(147, 51, 234, 0.2)" } : {}}
           >
             {char === ' ' ? '\u00A0' : char}
           </motion.span>
@@ -55,7 +55,7 @@ const HeroTypography = () => {
 
   return (
     <div className="text-left relative inline-block w-max md:-mt-10 lg:-mt-20 mr-0 md:mr-4 lg:mr-8 ml-auto">
-      <p className="relative z-20 text-[#c2a4ff] font-clash font-normal text-xl md:text-2xl lg:text-3xl tracking-wide mb-0 lg:mb-1 opacity-90 drop-shadow-md text-left">
+      <p className="relative z-20 text-purple-600 font-clash font-normal text-xl md:text-2xl lg:text-3xl tracking-wide mb-0 lg:mb-1 opacity-90 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)] text-left">
         A Creative
       </p>
 
@@ -89,7 +89,7 @@ export default function HeroSection() {
       {/* Siêu phẩm: Khối Thạch Pha Lê Đa Sắc (Multicolored Blob) */}
       <FluidBlob />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/10 rounded-full blur-[150px] -z-10 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
       <div className="container mx-auto px-6 relative flex flex-col md:flex-row justify-between items-center md:items-start z-10 w-full pointer-events-none">
 
@@ -100,10 +100,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full md:w-5/12 text-left mb-16 md:mb-0 md:pl-16 lg:pl-32 magnetic md:-mt-10 lg:-mt-20"
         >
-          <p className="text-[#c2a4ff] font-clash font-normal text-xl md:text-2xl lg:text-3xl tracking-wide mb-0 lg:mb-1 opacity-90 magnetic pointer-events-auto drop-shadow-md">
+          <p className="text-purple-600 font-clash font-normal text-xl md:text-2xl lg:text-3xl tracking-wide mb-0 lg:mb-1 opacity-90 magnetic pointer-events-auto drop-shadow-none">
             Hello! I'm
           </p>
-          <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.2rem] font-clash font-black text-[#e2e8f0] leading-none tracking-wider uppercase magnetic pointer-events-auto">
+          <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.2rem] font-clash font-black text-neutral-900 leading-none tracking-wider uppercase magnetic pointer-events-auto">
             NAHN
           </h1>
         </motion.div>
@@ -125,11 +125,11 @@ export default function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer z-50 pointer-events-auto"
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
-        <div className="w-6 h-10 md:w-7 md:h-12 border-2 border-white/60 rounded-full flex justify-center p-1.5 hover:border-white transition-colors">
+        <div className="w-6 h-10 md:w-7 md:h-12 border-2 border-neutral-400 rounded-full flex justify-center p-1.5 hover:border-neutral-900 transition-colors">
           <motion.div
             animate={{ y: [0, 16], opacity: [1, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut" }}
-            className="w-1.5 h-1.5 bg-white/80 rounded-full"
+            className="w-1.5 h-1.5 bg-neutral-500 rounded-full"
           />
         </div>
       </motion.div>

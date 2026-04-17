@@ -13,35 +13,35 @@ export default function Blog() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <Link to="/" className="text-purple-400 hover:text-purple-300 font-sans text-sm tracking-widest flex items-center gap-2 mb-8 group w-fit transition-all duration-300">
+          <Link to="/" className="text-purple-600 hover:text-purple-700 font-sans text-sm tracking-widest flex items-center gap-2 mb-8 group w-fit transition-all duration-300">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             BACK TO HOME
           </Link>
-          <h1 className="text-4xl md:text-6xl font-clash font-semibold text-white tracking-tight leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-clash font-semibold text-neutral-900 tracking-tight leading-tight mb-6">
             Optimizing Depth-First Search (DFS) for Graph Cycles
           </h1>
-          <div className="flex items-center gap-4 text-neutral-400 font-sans text-sm tracking-wide border-b border-white/10 pb-8">
+          <div className="flex items-center gap-4 text-neutral-500 font-sans text-sm tracking-wide border-b border-neutral-200 pb-8">
             <span>By Thành Nhân</span>
             <span>•</span>
             <span>May 15, 2026</span>
             <span>•</span>
-            <span className="text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full text-xs">Algorithms</span>
+            <span className="text-purple-700 bg-purple-100 px-3 py-1 rounded-full text-xs">Algorithms</span>
           </div>
         </motion.div>
 
-        {/* Khối nội dung Typography Markdown chuẩn cho Dark Mode */}
+        {/* Khối nội dung Typography Markdown chuẩn cho Light Mode */}
         <motion.article 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="prose prose-invert prose-lg md:prose-xl max-w-none 
-          prose-h2:font-clash prose-h2:text-3xl prose-h2:text-purple-300 prose-h2:mt-12 prose-h2:mb-6
-          prose-p:text-neutral-300 prose-p:leading-relaxed prose-p:font-sans
-          prose-a:text-purple-400 hover:prose-a:text-purple-300 prose-a:no-underline hover:prose-a:underline
-          prose-code:text-[#a855f7] prose-code:bg-purple-500/10 prose-code:px-2 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
-          prose-pre:bg-[#0d0d12] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-xl
-          prose-strong:text-white prose-strong:font-semibold
-          prose-li:text-neutral-300 marker:prose-li:text-purple-500"
+          className="prose prose-neutral prose-lg md:prose-xl max-w-none 
+          prose-h2:font-clash prose-h2:text-3xl prose-h2:text-neutral-900 prose-h2:mt-12 prose-h2:mb-6
+          prose-p:text-neutral-700 prose-p:leading-relaxed prose-p:font-sans
+          prose-a:text-purple-600 hover:prose-a:text-purple-700 prose-a:no-underline hover:prose-a:underline
+          prose-code:text-[#7e22ce] prose-code:bg-purple-100 prose-code:px-2 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
+          prose-pre:bg-[#F8FAFC] prose-pre:border prose-pre:border-neutral-200 prose-pre:shadow-sm prose-pre:text-neutral-800
+          prose-strong:text-neutral-900 prose-strong:font-semibold
+          prose-li:text-neutral-700 marker:prose-li:text-purple-600"
         >
           <p>
             When tackling complex competitive programming challenges on Codeforces or LeetCode, identifying graph cycles efficiently is paramount. Standard DFS implementations are elegant but can sometimes suffer when dealing with densely connected cyclic components, causing TLE (Time Limit Exceeded) errors.

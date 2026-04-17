@@ -30,17 +30,17 @@ export default function IdCard() {
       <div className="relative w-full max-w-[280px] lg:max-w-[320px] aspect-[1/1.5] mx-auto z-30 mb-10 lg:mb-0 group">
 
          {/* Vầng hào quang (Glowing Aura) khớp với màu Blob của Hero Section */}
-         <div className="absolute -inset-1 bg-gradient-to-br from-fuchsia-600/40 via-purple-600/40 to-cyan-600/40 rounded-[2rem] blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+         <div className="absolute -inset-1 bg-gradient-to-br from-fuchsia-600/20 via-purple-600/20 to-cyan-600/20 rounded-[2rem] blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
          {/* Thân thẻ Glassmorphism */}
-         <div className="relative w-full h-full rounded-[2rem] bg-[#0a0514]/60 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 flex flex-col font-sans overflow-hidden">
+         <div className="relative w-full h-full rounded-[2rem] bg-white/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-neutral-200 flex flex-col font-sans overflow-hidden">
 
             {/* Lỗ xỏ dây đeo thẻ */}
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-14 h-2.5 bg-black/60 rounded-full border-b border-white/20 shadow-inner z-20" />
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-14 h-2.5 bg-neutral-200 rounded-full border-b border-neutral-300 shadow-inner z-20" />
 
             {/* Dải Gradient trên cùng */}
-            <div className="h-[4.5rem] w-full bg-gradient-to-b from-white/10 to-transparent flex items-end justify-center pb-2 border-b border-white/5">
-               <span className="text-white/60 font-medium text-[10px] tracking-[0.4em] uppercase">
+            <div className="h-[4.5rem] w-full bg-gradient-to-b from-neutral-100 to-transparent flex items-end justify-center pb-2 border-b border-neutral-200">
+               <span className="text-neutral-500 font-medium text-[10px] tracking-[0.4em] uppercase">
                   HCMUS • APCS
                </span>
             </div>
@@ -61,36 +61,36 @@ export default function IdCard() {
 
             {/* Thông tin nhân viên */}
             <div className="px-4 mt-6 text-center">
-               <h3 className="text-xl md:text-2xl font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-cyan-400">
+               <h3 className="text-xl md:text-2xl font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-cyan-600">
                   BACKEND
                </h3>
-               <h3 className="text-white text-md font-bold tracking-[0.2em] uppercase mt-0.5 opacity-90">
+               <h3 className="text-neutral-900 text-md font-bold tracking-[0.2em] uppercase mt-0.5 opacity-90">
                   DEVELOPER
                </h3>
             </div>
 
             {/* Chỉ số Lập trình thi đấu thi đấu thực tế (Live Stats) */}
             <div className="px-5 mt-auto mb-6 w-full">
-               <div className="bg-white/5 rounded-xl p-3 md:p-3.5 space-y-2.5 border border-white/10 shadow-inner backdrop-blur-md">
+               <div className="bg-neutral-50 rounded-xl p-3 md:p-3.5 space-y-2.5 border border-neutral-200 shadow-inner backdrop-blur-md">
 
                   <a href="https://codeforces.com/profile/fan_lamu" target="_blank" rel="noreferrer" className="flex justify-between items-center group/link">
-                     <span className="text-[#60a5fa] text-[10px] md:text-[11px] font-bold tracking-widest uppercase drop-shadow-[0_0_5px_rgba(96,165,250,0.5)]">Codeforces</span>
-                     <span className="text-neutral-300 text-[10px] font-mono group-hover/link:text-white group-hover/link:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all">{cfRating} ↗</span>
+                     <span className="text-[#3b82f6] text-[10px] md:text-[11px] font-bold tracking-widest uppercase">Codeforces</span>
+                     <span className="text-neutral-600 text-[10px] font-mono group-hover/link:text-black transition-all">{cfRating} ↗</span>
                   </a>
 
                   <a href="https://leetcode.com/u/Proteam23/" target="_blank" rel="noreferrer" className="flex justify-between items-center group/link">
-                     <span className="text-[#fbbf24] text-[10px] md:text-[11px] font-bold tracking-widest uppercase drop-shadow-[0_0_5px_rgba(251,191,36,0.5)]">LeetCode</span>
-                     <span className="text-neutral-300 text-[10px] font-mono group-hover/link:text-white group-hover/link:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all">{lcSolved} Solved ↗</span>
+                     <span className="text-[#eab308] text-[10px] md:text-[11px] font-bold tracking-widest uppercase">LeetCode</span>
+                     <span className="text-neutral-600 text-[10px] font-mono group-hover/link:text-black transition-all">{lcSolved} Solved ↗</span>
                   </a>
 
                   <a href="https://atcoder.jp/users/fan_lamu" target="_blank" rel="noreferrer" className="flex justify-between items-center group/link">
-                     <span className="text-[#c084fc] text-[10px] md:text-[11px] font-bold tracking-widest uppercase drop-shadow-[0_0_5px_rgba(192,132,252,0.5)]">AtCoder</span>
-                     <span className="text-neutral-300 text-[10px] font-mono group-hover/link:text-white group-hover/link:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all">1665 ↗</span>
+                     <span className="text-[#a855f7] text-[10px] md:text-[11px] font-bold tracking-widest uppercase">AtCoder</span>
+                     <span className="text-neutral-600 text-[10px] font-mono group-hover/link:text-black transition-all">1665 ↗</span>
                   </a>
 
                   <a href="https://oj.vnoi.info/user/nahn" target="_blank" rel="noreferrer" className="flex justify-between items-center group/link">
-                     <span className="text-[#34d399] text-[10px] md:text-[11px] font-bold tracking-widest uppercase drop-shadow-[0_0_5px_rgba(52,211,153,0.5)]">VNOJ</span>
-                     <span className="text-neutral-300 text-[10px] font-mono group-hover/link:text-white group-hover/link:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all">2315 ↗</span>
+                     <span className="text-[#10b981] text-[10px] md:text-[11px] font-bold tracking-widest uppercase">VNOJ</span>
+                     <span className="text-neutral-600 text-[10px] font-mono group-hover/link:text-black transition-all">2315 ↗</span>
                   </a>
 
                </div>
