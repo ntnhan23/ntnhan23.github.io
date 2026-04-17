@@ -49,8 +49,7 @@ export default function ProjectSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="w-full md:w-1/2 lg:w-1/3 shrink-0 snap-center flex flex-col p-6 lg:p-8 lg:pt-10 group min-h-[500px] glass-card hover:bg-white/80 transition-all duration-700 relative overflow-hidden"
+            className="w-full md:w-1/2 lg:w-1/3 shrink-0 snap-center flex flex-col p-6 lg:p-8 lg:pt-10 group min-h-[500px] bg-white border border-neutral-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-700 relative overflow-hidden"
           >
             {/* Vùng Ảnh (Image) */}
             <div className="relative w-full mb-10 flex items-center justify-center cursor-pointer">
@@ -97,8 +96,7 @@ export default function ProjectSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="w-full md:w-1/2 lg:w-1/3 shrink-0 snap-center flex flex-col p-6 lg:p-8 lg:pb-10 group min-h-[500px] glass-card hover:bg-white/80 transition-all duration-700 relative overflow-hidden"
+            className="w-full md:w-1/2 lg:w-1/3 shrink-0 snap-center flex flex-col p-6 lg:p-8 lg:pb-10 group min-h-[500px] bg-white border border-neutral-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-700 relative overflow-hidden"
           >
             {/* Vùng Tiêu đề & Cấp độ */}
             <div className="flex flex-row justify-between items-end mb-6 lg:mb-8 w-full font-clash">
@@ -128,8 +126,7 @@ export default function ProjectSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="w-full md:w-1/2 lg:w-1/3 shrink-0 snap-center flex flex-col p-6 lg:p-8 lg:pt-10 group min-h-[500px] glass-card hover:bg-white/80 transition-all duration-700 relative overflow-hidden"
+            className="w-full md:w-1/2 lg:w-1/3 shrink-0 snap-center flex flex-col p-6 lg:p-8 lg:pt-10 group min-h-[500px] bg-white border border-neutral-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-700 relative overflow-hidden"
           >
             {/* Khung đứt chờ ảnh (Placeholder) */}
             <div className="flex-1 w-full flex items-center justify-center border border-dashed border-neutral-300 mb-10 rounded-2xl group-hover:border-blue-500/30 transition-colors aspect-video md:aspect-[4/3] bg-neutral-50">
