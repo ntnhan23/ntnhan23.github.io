@@ -52,13 +52,13 @@ const SeamlessLighting = () => {
 
     return (
         <group ref={groupRef}>
-            {/* Tone màu Deep Blue x Cyan hòa quyện (Hệ Thủy) */}
-            <pointLight position={[ 4,  0,  0]} color="#1d4ed8" intensity={80} distance={12} /> {/* Blue 700 */}
-            <pointLight position={[-4,  0,  0]} color="#06b6d4" intensity={60} distance={12} /> {/* Cyan 500 */}
-            <pointLight position={[ 0,  4,  0]} color="#3b82f6" intensity={70} distance={12} /> {/* Blue 500 */}
-            <pointLight position={[ 0, -4,  0]} color="#0369a1" intensity={80} distance={12} /> {/* Sky 700 */}
-            <pointLight position={[ 0,  0,  4]} color="#0ea5e9" intensity={60} distance={12} /> {/* Sky 500 */}
-            <pointLight position={[ 0,  0, -4]} color="#2dd4bf" intensity={70} distance={12} /> {/* Teal 400 */}
+            {/* Tone màu Đa Sắc Rực Rỡ Holographic - Cực kì nổi bật trên nền Trắng */}
+            <pointLight position={[ 4,  0,  0]} color="#ff007a" intensity={90} distance={12} /> {/* Vivid Pink */}
+            <pointLight position={[-4,  0,  0]} color="#00e5ff" intensity={80} distance={12} /> {/* Cyan ảo */}
+            <pointLight position={[ 0,  4,  0]} color="#f59e0b" intensity={90} distance={12} /> {/* Sunset Orange */}
+            <pointLight position={[ 0, -4,  0]} color="#3b82f6" intensity={80} distance={12} /> {/* Royal Blue */}
+            <pointLight position={[ 0,  0,  4]} color="#8b5cf6" intensity={90} distance={12} /> {/* Neon Violet */}
+            <pointLight position={[ 0,  0, -4]} color="#10b981" intensity={80} distance={12} /> {/* Emerald Green */}
         </group>
     );
 };
@@ -73,8 +73,8 @@ export default memo(function FluidBlob() {
           eventSource={typeof window !== 'undefined' ? document.body : undefined}
           eventPrefix="client"
         >
-          {/* Ánh sáng môi trường cấp đủ sáng nền cho Light Theme */}
-          <ambientLight intensity={1.5} color="#ffffff" />
+          {/* Giảm ánh sáng môi trường xuống 0.6 để Khối cầu tự phát sáng Holographic hiển thị sắc độ đậm và nét, không bị nền trắng "luộc chín" (wash out) */}
+          <ambientLight intensity={0.6} color="#ffffff" />
           
           {/* Hệ thống nhuộm màu Ánh sáng vật lý vô tận */}
           <SeamlessLighting />
@@ -82,7 +82,7 @@ export default memo(function FluidBlob() {
           {/* Khối Thạch Tối Giản */}
           <Blob />
           
-          <ContactShadows position={[0, -2.5, 0]} opacity={0.3} scale={15} blur={4} far={4} color="#1e3a8a" />
+          <ContactShadows position={[0, -2.5, 0]} opacity={0.3} scale={15} blur={4} far={4} color="#8b5cf6" />
         </Canvas>
       </div>
     </div>
