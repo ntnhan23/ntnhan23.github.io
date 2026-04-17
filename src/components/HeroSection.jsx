@@ -31,9 +31,9 @@ const StaggeredAnimatedWord = ({ word, isBackground }) => {
             }}
             className={`select-none font-clash uppercase tracking-wider leading-none block pb-1 ${isBackground
               ? "font-bold text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] text-transparent"
-              : "font-bold text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] bg-clip-text text-transparent bg-gradient-to-br from-indigo-500 via-sky-400 to-fuchsia-400 drop-shadow-sm"
+              : "font-bold text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-fuchsia-300 to-indigo-400 drop-shadow-sm"
               }`}
-            style={isBackground ? { WebkitTextStroke: "1.5px rgba(100, 116, 139, 0.4)" } : {}}
+            style={isBackground ? { WebkitTextStroke: "1px rgba(148, 163, 184, 0.4)" } : {}}
           >
             {char === ' ' ? '\u00A0' : char}
           </motion.span>
@@ -55,7 +55,7 @@ const HeroTypography = () => {
 
   return (
     <div className="text-left relative inline-block w-max md:-mt-10 lg:-mt-20 mr-0 md:mr-4 lg:mr-8 ml-auto">
-      <p className="relative z-20 font-clash font-normal text-slate-500 text-xl md:text-2xl lg:text-3xl tracking-wide mb-0 lg:mb-1 opacity-90 text-left capitalize">
+      <p className="relative z-20 font-clash font-normal text-indigo-400 text-xl md:text-2xl lg:text-3xl tracking-wide mb-0 lg:mb-1 opacity-90 text-left capitalize">
         a creative
       </p>
 
@@ -98,10 +98,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full md:w-5/12 text-left mb-16 md:mb-0 md:pl-16 lg:pl-32 magnetic md:-mt-10 lg:-mt-20"
         >
-          <p className="font-clash font-normal text-indigo-500 text-xl md:text-2xl lg:text-3xl tracking-wide mb-0 lg:mb-1 opacity-90 magnetic pointer-events-auto">
+          <p className="font-clash font-normal text-indigo-400 text-xl md:text-2xl lg:text-3xl tracking-wide mb-0 lg:mb-1 opacity-90 magnetic pointer-events-auto">
             Hello! I'm
           </p>
-          <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.2rem] font-clash font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-sky-400 leading-none tracking-wider uppercase magnetic pointer-events-auto">
+          <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.2rem] font-clash font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 leading-none tracking-wider uppercase magnetic pointer-events-auto">
             NAHN
           </h1>
         </motion.div>
