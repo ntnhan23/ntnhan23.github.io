@@ -90,6 +90,9 @@ export default function BlogPost() {
             remarkPlugins={[remarkGfm, remarkMath]}
             rehypePlugins={[rehypeKatex]}
             components={{
+              a(props) {
+                return <a {...props} target="_blank" rel="noopener noreferrer" />;
+              },
               pre({ children }) {
                 return <div className="my-10 rounded-xl overflow-hidden shadow-sm border border-neutral-200/80 bg-white/50 backdrop-blur-md relative group">{children}</div>;
               },

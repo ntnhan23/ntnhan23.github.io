@@ -23,6 +23,11 @@ export function parseFrontmatter(fileName, markdownContent) {
         data[key] = value;
       }
     });
+
+    if (data.tags) {
+      data.tags = typeof data.tags === 'string' ? data.tags.split(',').map(t => t.replace(/"/g, '').trim()) : data.tags;
+    }
+
     // Remove the frontmatter block from content
     content = markdownContent.replace(match[0], '').trim();
   }
