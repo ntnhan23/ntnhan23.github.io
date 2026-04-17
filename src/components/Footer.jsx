@@ -14,7 +14,6 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           <a href="#" className="hover:text-indigo-500 transition-colors">GitHub</a>
           <a href="#" className="hover:text-indigo-500 transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-indigo-500 transition-colors">Contact</a>
         </div>
       </div>
     </footer>
