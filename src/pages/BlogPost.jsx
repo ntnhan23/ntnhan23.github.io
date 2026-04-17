@@ -36,7 +36,7 @@ export default function BlogPost() {
         <ParticleNetwork />
       </div>
 
-      <div className="max-w-4xl mx-auto w-full relative z-20 flex-1">
+      <div className="max-w-5xl mx-auto w-full relative z-20 flex-1 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-neutral-100 p-8 md:p-12 lg:p-16 mb-24">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
