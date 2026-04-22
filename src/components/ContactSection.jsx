@@ -49,8 +49,8 @@ export default function ContactSection() {
              <h4 className="text-sm font-sans text-neutral-500 mb-2">Social</h4>
              <div className="flex flex-col w-full">
                {[
-                 { name: 'Github', url: 'https://github.com/nahn-apcs' },
-                 { name: 'Linkedin', url: 'https://www.linkedin.com/in/th%C3%A0nh-nh%C3%A2n-nguy%E1%BB%85n-911a9b2b4/' },
+                 { name: 'Github', url: 'https://github.com/ntnhan23' },
+                 { name: 'Linkedin', url: 'https://www.linkedin.com/in/nahn23/' },
                  { name: 'Facebook', url: 'https://www.facebook.com/thanh.nhan.269619/' },
                  { name: 'Instagram', url: 'https://www.instagram.com/th_._nh__21/' }
                ].map((social) => (

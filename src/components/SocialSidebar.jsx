@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 export default function SocialSidebar() {
   const socials = [
-    { icon: <FaGithub size={24} />, href: "https://github.com/nahn-apcs" },
-    { icon: <FaLinkedin size={24} />, href: "https://www.linkedin.com/in/th%C3%A0nh-nh%C3%A2n-nguy%E1%BB%85n-911a9b2b4/" },
+    { icon: <FaGithub size={24} />, href: "https://github.com/ntnhan23" },
+    { icon: <FaLinkedin size={24} />, href: "https://www.linkedin.com/in/nahn23/" },
     { icon: <FaFacebook size={24} />, href: "https://www.facebook.com/thanh.nhan.269619/" },
     { icon: <FaXTwitter size={24} />, href: "https://x.com/nahn2305" },
     { icon: <FaInstagram size={24} />, href: "https://www.instagram.com/th_._nh__21/" },
