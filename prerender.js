@@ -39,10 +39,12 @@ for (const url of routesToPrerender) {
 }
 
 // Generate sitemap.xml
+const date = new Date().toISOString();
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routesToPrerender.map(url => `  <url>
     <loc>${domain}${url === '/' ? '/' : url + '/'}</loc>
+    <lastmod>${date}</lastmod>
     <changefreq>${url === '/' ? 'daily' : 'weekly'}</changefreq>
     <priority>${url === '/' ? '1.0' : '0.8'}</priority>
   </url>`).join('\n')}
