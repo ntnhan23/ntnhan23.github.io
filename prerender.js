@@ -11,12 +11,16 @@ const { render, getRoutes } = await import(new URL('./dist/server/entry-server.j
 
 const routesToPrerender = getRoutes()
 
+const domain = 'https://ntnhan23.github.io';
+
 console.log(`Starting prerender for ${routesToPrerender.length} routes...`)
 
 for (const url of routesToPrerender) {
   const { html } = render(url)
 
-  const finalHtml = template.replace(`<!--app-html-->`, html)
+  const canonicalUrl = `${domain}${url === '/' ? '/' : url + '/'}`;
+  let finalHtml = template.replace(`<!--app-html-->`, html)
+  finalHtml = finalHtml.replace('</head>', `  <link rel="canonical" href="${canonicalUrl}" />\n  </head>`)
 
   let filePath;
   if (url === '/') {
@@ -35,11 +39,10 @@ for (const url of routesToPrerender) {
 }
 
 // Generate sitemap.xml
-const domain = 'https://ntnhan23.github.io';
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routesToPrerender.map(url => `  <url>
-    <loc>${domain}${url === '/' ? '' : url}</loc>
+    <loc>${domain}${url === '/' ? '/' : url + '/'}</loc>
     <changefreq>${url === '/' ? 'daily' : 'weekly'}</changefreq>
     <priority>${url === '/' ? '1.0' : '0.8'}</priority>
   </url>`).join('\n')}
